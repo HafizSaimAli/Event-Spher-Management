@@ -6,7 +6,7 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
   const navigate = useNavigate()
 
-  const scrollToSection = (id) => {
+  const scrollToSection = (id) => { 
     if (window.location.pathname !== '/') {
       navigate('/')
       

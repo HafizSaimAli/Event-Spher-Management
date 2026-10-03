@@ -3,7 +3,6 @@ import Dashboard from './pages/Dashboard/Dashboard'
 import { TooltipProvider } from './components/ui/tooltip'
 import { Route, Routes } from 'react-router-dom'
 import ScrollTopButton from './components/ScrollTopButton'
-import ProtectedRoute from './components/ProtectedRoute'
 import ScrollToTop from './pages/Landing-page/ScrollToTop'
 import Home from './pages/Landing-page/Home'
 import Eror404 from './pages/Landing-page/Eror404'
@@ -63,13 +62,12 @@ const App = () => {
 
 
 
-      <Route element={<ProtectedRoute />}>    
+    
       <Route path='/Dashboard' element={<DashboardLayout/>}>    
       <Route index element={<Dashboard/>}/>
        <Route path='Contact' element={<Contact/>}/>
       <Route path='*' element={<Eror404/>}/>
       </Route>
-  </Route>
       
 
     </Routes>
